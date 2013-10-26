@@ -122,7 +122,7 @@ public partial class ModuleWeaver
         ActionConstructorReference = ModuleDefinition.Import(actionConstructor);
 
 
-        var systemObjectModel = assemblyResolver.Resolve("System.ObjectModel");
+        var systemObjectModel = assemblyResolver.Resolve("ReactiveUI");
         var systemObjectModelTypes = systemObjectModel.MainModule.Types;
 
         var propChangingInterfaceDefinition = systemObjectModelTypes.First(x => x.Name == "INotifyPropertyChanging");
